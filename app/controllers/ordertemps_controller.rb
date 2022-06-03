@@ -1,0 +1,2 @@
+class OrdertempsController < ApplicationController
+end

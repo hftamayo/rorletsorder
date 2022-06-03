@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ordertemps
   resources :orders
   resources :clientaddresses
   resources :clients
