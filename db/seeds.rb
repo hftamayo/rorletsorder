@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Meals.destroy_all
+Meal.destroy_all
 
-Meals.create!([
+Meal.create!([
     {
         name: 'Cheese and Loroco', 
         description: 'Corn made pupusa with cheese', 
@@ -41,4 +41,4 @@ Meals.create!([
     }                     
     ])
 
-    p "Meals created: #{Meals.count}"
+    p "Meals created: #{Meal.count}"
