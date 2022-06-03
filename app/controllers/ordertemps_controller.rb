@@ -26,7 +26,7 @@ class OrdertempsController < ApplicationController
         @ordertemp = Ordertemp.find(params[:id])
         if @ordertemp
             @ordertemp.update(ordertemp_params)
-            render.json: { message: 'Order successfully updated.'}, status: 200
+            render json: { message: 'Order successfully updated.'}, status: 200
         else
             render json: { error: 'Unable to update the order.', status: 400}
         end
