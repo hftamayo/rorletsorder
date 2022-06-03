@@ -1,0 +1,2 @@
+class ClientaddressesController < ApplicationController
+end
