@@ -13,7 +13,7 @@ class ClientsController < ApplicationController
     
         #POST /clients
         def create
-            @client = Cient.new(client_params)
+            @client = Client.new(client_params)
             if @client.save
                 render json: @client
             else
