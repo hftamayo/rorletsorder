@@ -7,10 +7,10 @@ class ClientsController < ApplicationController
     
         #GET /client/:id
         def show
+            @client = Client.find(params[:id])
             render json: @client
         end
     
-            @client = Client.find(params[:id])
         #POST /clients
         def create
             @client = Cient.new(client_params)
