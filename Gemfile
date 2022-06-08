@@ -26,7 +26,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
  gem 'rack-cors', :require => 'rack/cors'
 
  #hftamayo: https://www.thegreatcodeadventure.com/building-a-super-simple-rails-api-json-api-edition-2/
- gem 'active_model_serializers'
+ #gem 'active_model_serializers'
+gem 'responders'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
