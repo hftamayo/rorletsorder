@@ -2,6 +2,9 @@ class MealsController < ApplicationController
     #get /meals
     def index
         @meals = Meal.all
-        render json: @meals
+        respond_to do |format|
+            format.html
+            format.json {render json: @meals}
+        end
     end
 end
