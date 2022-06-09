@@ -47,7 +47,7 @@ class OrdertempsController < ApplicationController
     private
 
     def ordertemp_params
-        params.require(:ordertemp).permit(:amount, :mealid, :name, :price)
+        params.require(:ordertemp).permit(:amount, :mealid, :name, :price, :clientName, :clientId)
     end
 
 end
