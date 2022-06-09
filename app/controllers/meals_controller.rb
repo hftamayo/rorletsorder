@@ -2,11 +2,11 @@ class MealsController < ApplicationController
     #get /meals
     def index
         @meals = Meal.all
+        render json: @meals
+    end
 
-        respond_to do |format|
-            format.html
-            format.json {render json: @meals}
-        end
-        #render json: @meals
+    def show
+        @meal = Meal.find(params[:id])
+        render json: @meal
     end
 end
