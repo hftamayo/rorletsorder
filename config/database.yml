@@ -84,5 +84,5 @@ production:
   database: <%= ENV['RORLETSORDER_DATABASE_NAME'] %> #rorletsorder_production
   username: <%= ENV['RORLETSORDER_DATABASE_USERNAME'] %> #rorletsorder
   password: <%= ENV['RORLETSORDER_DATABASE_PASSWORD'] %>
-  port: <%= ENV['RORLETSORDER_DATABASE_PORT'] %>
+  port: <%= ENV['RORLETSORDER_DATABASE_PORT'] || '5432' %>
   host: <%= ENV['RORLETSORDER_DATABASE_HOST'] %>
