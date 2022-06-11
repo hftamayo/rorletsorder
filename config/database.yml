@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: rorletsorder_production
-  username: rorletsorder
+  database: <%= ENV['RORLETSORDER_DATABASE_NAME'] %> #rorletsorder_production
+  username: <%= ENV['RORLETSORDER_DATABASE_USERNAME'] %> #rorletsorder
   password: <%= ENV['RORLETSORDER_DATABASE_PASSWORD'] %>
+  port: <%= ENV['RORLETSORDER_DATABASE_PORT'] %>
+  host: <%= ENV['RORLETSORDER_DATABASE_HOST'] %>
