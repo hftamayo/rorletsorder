@@ -16,6 +16,8 @@ services:
     env_file: .env
     environment:
       RAILS_ENV: production
+    networks:
+      - letsorder
 
   database:
     image: postgres:13.7
@@ -24,8 +26,15 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - letsorder
+
 
 volumes:
   gem_cache:
   db_data:
   node_modules:
+
+networks:
+  letsorder:
+    driver: bridge
