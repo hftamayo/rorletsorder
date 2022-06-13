@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     depends_on:
-      - database
+      - rorletsorderdatabase
     ports:
       - "3000:3000"
     volumes:
@@ -21,8 +21,8 @@ services:
 
   rorletsorderdatabase:
     image: postgres:13.7
-    ports:
-      - "5432:5432"
+    #ports:
+    #  - "5432:5432"
     env_file:
       - ./.env
     volumes:
