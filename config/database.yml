@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
+  POSTGRES_USER: <%= ENV['RORLETSORDER_ADMIN_USER'] %>
+  POSTGRES_PASSWORD: <%= ENV['RORLETSORDER_ADMIN_PASSWORD'] %> 
   database: <%= ENV['RORLETSORDER_DATABASE_NAME'] %> #rorletsorder_production
   username: <%= ENV['RORLETSORDER_DATABASE_USERNAME'] %> #rorletsorder
   password: <%= ENV['RORLETSORDER_DATABASE_PASSWORD'] %>
