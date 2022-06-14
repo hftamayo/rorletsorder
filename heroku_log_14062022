@@ -1,0 +1,100 @@
+2022-06-14T06:12:20.050276+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:249:in `app'
+2022-06-14T06:12:20.050276+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:422:in `wrapped_app'
+2022-06-14T06:12:20.050276+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:312:in `block in start'
+2022-06-14T06:12:20.050286+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:379:in `handle_profiling'
+2022-06-14T06:12:20.050286+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:311:in `start'
+2022-06-14T06:12:20.050286+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:39:in `start'
+2022-06-14T06:12:20.050295+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+2022-06-14T06:12:20.050296+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:135:in `tap'
+2022-06-14T06:12:20.050296+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:135:in `perform'
+2022-06-14T06:12:20.050298+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+2022-06-14T06:12:20.050308+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+2022-06-14T06:12:20.050309+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+2022-06-14T06:12:20.050309+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/command/base.rb:69:in `perform'
+2022-06-14T06:12:20.050311+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/command.rb:48:in `invoke'
+2022-06-14T06:12:20.050322+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands.rb:18:in `<main>'
+2022-06-14T06:12:20.050323+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+2022-06-14T06:12:20.050323+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+2022-06-14T06:12:20.050368+00:00 app[web.1]: from bin/rails:5:in `<main>'
+2022-06-14T06:12:20.169660+00:00 heroku[web.1]: Process exited with status 1
+2022-06-14T06:12:20.256420+00:00 heroku[web.1]: State changed from starting to crashed
+2022-06-14T11:56:50.427545+00:00 heroku[web.1]: State changed from crashed to starting
+2022-06-14T11:56:51.979320+00:00 heroku[web.1]: Starting process with command `bin/rails server -p ${PORT:-5000} -e production`
+2022-06-14T11:56:54.448434+00:00 app[web.1]: => Booting Puma
+2022-06-14T11:56:54.448449+00:00 app[web.1]: => Rails 6.1.6 application starting in production
+2022-06-14T11:56:54.448449+00:00 app[web.1]: => Run `bin/rails server --help` for more startup options
+2022-06-14T11:56:55.026569+00:00 app[web.1]: Exiting
+2022-06-14T11:56:55.026721+00:00 app[web.1]: /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded': expected file /app/app/serializers/meal_serializer.rb to define constant MealSerializer, but didn't (Zeitwerk::NameError)
+2022-06-14T11:56:55.026724+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/kernel.rb:28:in `require'
+2022-06-14T11:56:55.026725+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader/helpers.rb:95:in `const_get'
+2022-06-14T11:56:55.026726+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader/helpers.rb:95:in `cget'
+2022-06-14T11:56:55.026728+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader.rb:237:in `block (2 levels) in eager_load'
+2022-06-14T11:56:55.026729+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader/helpers.rb:26:in `block in ls'
+2022-06-14T11:56:55.026731+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader/helpers.rb:18:in `each_child'
+2022-06-14T11:56:55.026733+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader/helpers.rb:18:in `ls'
+2022-06-14T11:56:55.026734+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader.rb:232:in `block in eager_load'
+2022-06-14T11:56:55.026742+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader.rb:217:in `synchronize'
+2022-06-14T11:56:55.026743+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader.rb:217:in `eager_load'
+2022-06-14T11:56:55.026745+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader.rb:317:in `each'
+2022-06-14T11:56:55.026752+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/zeitwerk-2.5.4/lib/zeitwerk/loader.rb:317:in `eager_load_all'
+2022-06-14T11:56:55.026754+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/application/finisher.rb:133:in `block in <module:Finisher>'
+2022-06-14T11:56:55.026755+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/initializable.rb:32:in `instance_exec'
+2022-06-14T11:56:55.026762+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/initializable.rb:32:in `run'
+2022-06-14T11:56:55.026764+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/initializable.rb:61:in `block in run_initializers'
+2022-06-14T11:56:55.026765+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:228:in `block in tsort_each'
+2022-06-14T11:56:55.026773+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+2022-06-14T11:56:55.026774+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:431:in `each_strongly_connected_component_from'
+2022-06-14T11:56:55.026775+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:349:in `block in each_strongly_connected_component'
+2022-06-14T11:56:55.026784+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:347:in `each'
+2022-06-14T11:56:55.026785+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:347:in `call'
+2022-06-14T11:56:55.026787+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:347:in `each_strongly_connected_component'
+2022-06-14T11:56:55.026794+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:226:in `tsort_each'
+2022-06-14T11:56:55.026795+00:00 app[web.1]: from /app/vendor/ruby-2.7.0/lib/ruby/2.7.0/tsort.rb:205:in `tsort_each'
+2022-06-14T11:56:55.026797+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/initializable.rb:60:in `run_initializers'
+2022-06-14T11:56:55.026805+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/application.rb:391:in `initialize!'
+2022-06-14T11:56:55.026806+00:00 app[web.1]: from /app/config/environment.rb:5:in `<main>'
+2022-06-14T11:56:55.026809+00:00 app[web.1]: from config.ru:3:in `require_relative'
+2022-06-14T11:56:55.026811+00:00 app[web.1]: from config.ru:3:in `block in <main>'
+2022-06-14T11:56:55.026813+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/builder.rb:116:in `eval'
+2022-06-14T11:56:55.026815+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/builder.rb:116:in `new_from_string'
+2022-06-14T11:56:55.026822+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/builder.rb:105:in `load_file'
+2022-06-14T11:56:55.026823+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/builder.rb:66:in `parse_file'
+2022-06-14T11:56:55.026825+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:349:in `build_app_and_options_from_config'
+2022-06-14T11:56:55.026832+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:249:in `app'
+2022-06-14T11:56:55.026834+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:422:in `wrapped_app'
+2022-06-14T11:56:55.026835+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:312:in `block in start'
+2022-06-14T11:56:55.026842+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:379:in `handle_profiling'
+2022-06-14T11:56:55.026844+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/rack-2.2.3.1/lib/rack/server.rb:311:in `start'
+2022-06-14T11:56:55.026845+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:39:in `start'
+2022-06-14T11:56:55.026853+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:144:in `block in perform'
+2022-06-14T11:56:55.026854+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:135:in `tap'
+2022-06-14T11:56:55.026856+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands/server/server_command.rb:135:in `perform'
+2022-06-14T11:56:55.026864+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/thor-1.2.1/lib/thor/command.rb:27:in `run'
+2022-06-14T11:56:55.026865+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/thor-1.2.1/lib/thor/invocation.rb:127:in `invoke_command'
+2022-06-14T11:56:55.026867+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/thor-1.2.1/lib/thor.rb:392:in `dispatch'
+2022-06-14T11:56:55.026874+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/command/base.rb:69:in `perform'
+2022-06-14T11:56:55.026875+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/command.rb:48:in `invoke'
+2022-06-14T11:56:55.026877+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/railties-6.1.6/lib/rails/commands.rb:18:in `<main>'
+2022-06-14T11:56:55.026887+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+2022-06-14T11:56:55.026887+00:00 app[web.1]: from /app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.12.0/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+2022-06-14T11:56:55.026890+00:00 app[web.1]: from bin/rails:5:in `<main>'
+2022-06-14T11:56:55.152100+00:00 heroku[web.1]: Process exited with status 1
+2022-06-14T11:56:55.411587+00:00 heroku[web.1]: State changed from starting to crashed
+2022-06-14T16:26:43.000000+00:00 app[api]: Build started by user hftamayo@gmail.com
+2022-06-14T16:26:55.763720+00:00 app[api]: Deploy 132d8784 by user hftamayo@gmail.com
+2022-06-14T16:26:55.763720+00:00 app[api]: Release v10 created by user hftamayo@gmail.com
+2022-06-14T16:26:56.933286+00:00 heroku[web.1]: State changed from crashed to starting
+2022-06-14T16:26:58.000000+00:00 app[api]: Build succeeded
+2022-06-14T16:26:58.557702+00:00 heroku[web.1]: Starting process with command `bin/rails server -p ${PORT:-5000} -e production`
+2022-06-14T16:27:01.387204+00:00 app[web.1]: => Booting Puma
+2022-06-14T16:27:01.387218+00:00 app[web.1]: => Rails 6.1.6 application starting in production
+2022-06-14T16:27:01.387218+00:00 app[web.1]: => Run `bin/rails server --help` for more startup options
+2022-06-14T16:27:02.283609+00:00 app[web.1]: Puma starting in single mode...
+2022-06-14T16:27:02.283631+00:00 app[web.1]: * Puma version: 5.6.4 (ruby 2.7.0-p0) ("Birdie's Version")
+2022-06-14T16:27:02.283631+00:00 app[web.1]: *  Min threads: 5
+2022-06-14T16:27:02.283631+00:00 app[web.1]: *  Max threads: 5
+2022-06-14T16:27:02.283631+00:00 app[web.1]: *  Environment: production
+2022-06-14T16:27:02.283631+00:00 app[web.1]: *          PID: 4
+2022-06-14T16:27:02.283820+00:00 app[web.1]: * Listening on http://0.0.0.0:33040
+2022-06-14T16:27:02.285719+00:00 app[web.1]: Use Ctrl-C to stop
+2022-06-14T16:27:02.637244+00:00 heroku[web.1]: State changed from starting to up
