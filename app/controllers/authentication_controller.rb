@@ -3,7 +3,7 @@ class AuthenticationController < ApplicationController
     skip_before_action :verify_authenticity_token, :only => :authenticate
     skip_before_action :authorize_request, only: :authenticate, raise: false
 
-    #/signin
+    #/signup
     def authenticate
       auth_token = AuthenticateClient.new(auth_params[:email], auth_params[:password]).call
       json_response(auth_token: auth_token)
