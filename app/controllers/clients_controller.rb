@@ -1,7 +1,9 @@
 class ClientsController < ApplicationController
-    skip_before_action :authorize_request, only: :create
-    #skip_before_action :find_client, except: %i[create index]
-    skip_before_action :verify_authenticity_token, :only => :create
+    #skip_before_action :authorize_request, only: :create
+    #skip_before_action :verify_authenticity_token, :only => :create
+    before_action :authorize_request, except: :create
+    before_action :find_client, except: %i[create index]
+        #skip_before_action :find_client, except: %i[create index]
 
         #GET /clients
         def index
@@ -18,9 +20,10 @@ class ClientsController < ApplicationController
         #POST /clients
         def create
             @client = Client.new(client_params)
-            auth_token = AuthenticateClient.new(client.email, client.password).call
+            #auth_token = AuthenticateClient.new(client.email, client.password).call
             if @client.save
-                response = { json: @client, message: Message.account_created, auth_token: auth_token }
+                #response = { json: @client, message: Message.account_created, auth_token: auth_token }
+                response = { json: @client, message: Message.account_created }
             else
                 response = { errors: @client.errors.full_messages , status: 400 }
             end
