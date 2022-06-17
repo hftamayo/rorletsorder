@@ -1,3 +1,4 @@
+#class in charge of coding and decoding token
 class JsonWebToken
     #SECRET_KEY = Rails.application.secrets.secret_key_base. to_s
     HMAC_SECRET = Rails.application.secrets.secret_key_base
