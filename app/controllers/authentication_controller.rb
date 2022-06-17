@@ -1,7 +1,7 @@
 class AuthenticationController < ApplicationController
-    #before_action :authorize_request, except: :login
-    skip_before_action :verify_authenticity_token, :only => :authenticate
-    skip_before_action :authorize_request, only: :authenticate, raise: false
+    before_action :authorize_request, except: :login
+    #skip_before_action :verify_authenticity_token, :only => :authenticate
+    #skip_before_action :authorize_request, only: :authenticate, raise: false
 
     #/signup
     def authenticate
@@ -12,7 +12,7 @@ class AuthenticationController < ApplicationController
     # POST /auth/login
     def login
       @client = Client.find_by_email(params[:email])
-      if @client&.authenticate(params[:password_digest])
+      if @client&.authenticate(params[:password])
         token = JsonWebToken.encode(client_id: @client.id)
         time = Time.now + 24.hours.to_i
         render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M"),
