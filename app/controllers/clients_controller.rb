@@ -23,9 +23,9 @@ class ClientsController < ApplicationController
             #auth_token = AuthenticateClient.new(client.email, client.password).call
             if @client.save
                 #response = { json: @client, message: Message.account_created, auth_token: auth_token }
-                response = { json: @client, message: Message.account_created }
+                render json: @client
             else
-                response = { errors: @client.errors.full_messages , status: 400 }
+                render error: { error: 'Unable signup a client'}, status: 400
             end
         end
     
