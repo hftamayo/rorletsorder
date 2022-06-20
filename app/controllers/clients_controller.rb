@@ -1,20 +1,22 @@
 class ClientsController < ApplicationController
     #skip_before_action :authorize_request, only: :create
     #skip_before_action :verify_authenticity_token, :only => :create
+    
     before_action :authorize_request, except: :create
     before_action :find_client, except: %i[create index]
-        #skip_before_action :find_client, except: %i[create index]
+    
+    #skip_before_action :find_client, except: %i[create index]
 
         #GET /clients
         def index
             @clients = Client.all
-            render json: @clients, status: :ok
+            render json: @clients
         end
     
         #GET /client/:id
         def show
             @client = Client.find(params[:id])
-            render json: @client, status: :ok
+            render json: @client
         end
     
         #POST /clients
