@@ -13,12 +13,20 @@ class OrdertempsController < ApplicationController
 
     #POST /ordertemps
     def create
-        @ordertemp = Ordertemp.new(ordertemp_params)
-        if @ordertemp.save
-            render json: @ordertemp
-        else
-            render error: { error: 'Unable to create an order'}, status: 400
+        begin
+            Ordertemp.transaction do
+                @ordertemp = Ordertemp.create!(ordertemp_params)
+            end
+
+        rescue ActiveRecord::RecordInvalid => exception
+            @ordertemp = {
+                error: {
+                    status: 422,
+                    message: exception
+                }
+            }
         end
+        render json: @ordertemp
     end
 
     #PUT /ordertemps/:id
@@ -48,7 +56,7 @@ class OrdertempsController < ApplicationController
 
     def ordertemp_params
         #params.require(:ordertemp).permit( :clientName, :clientId, :amount, :mealid, :name, :price)
-        params.require(:ordertemp).permit(:name, :amount, :price)
+        params.permit(ordertemp: [:name, :amount, :price]).require(:ordertemp)
     end
 
 end
