@@ -1,13 +1,4 @@
 class ApplicationController < ActionController::API
-    #include ActionController::MimeResponds
-    #skip_before_action :authorize_request, only: :authenticate, raise: false
-
-    #include Response
-    #include ExceptionHandler
-
-    #called before every action on controller
-    #before_action :authorize_request
-    #attr_reader :current_client
 
     def not_found
         render json: { error: 'not_found' }
