@@ -1,4 +1,31 @@
 class ApplicationController < ActionController::API
+    skip_before_action :verify_authenticity_token
+
+    helper_method :login!, :logged_in?, :current_client, :authorized_client?, :logout!, :set_client
+
+    def login!
+        session[:client_id] = @client_id
+    end
+
+    def logged_in?
+        !!session[:client_id]
+    end
+
+    def current_client:
+        @client_id ||= Client.find_by_email(session[:client_id]) if session[:client_id]
+    end
+
+    def authorized_client?
+        @client == current_client
+    end
+
+    def logout!
+        session.clear
+    end
+
+    def set_client
+        @client = Client.find_by(id: session[:client_id])
+    end
 
     def not_found
         render json: { error: 'not_found' }
