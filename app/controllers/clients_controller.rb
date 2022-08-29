@@ -10,13 +10,21 @@ class ClientsController < ApplicationController
         #GET /clients
         def index
             @clients = Client.all
-            render json: @clients
+            if @clients
+                render json: @clients
+            else
+                render json: { status:500, errors: ['no clients found']}
+            end
         end
     
         #GET /client/:id
         def show
             @client = Client.find(params[:id])
-            render json: @client
+            if @client
+                render json: @client
+            else
+                render json: { status:500, errors: ['no client found']}
+            end            
         end
     
         #POST /clients
@@ -56,8 +64,11 @@ class ClientsController < ApplicationController
 
         def find_client
             @client = Client.find_by_email!(params[:_email])
-            rescue ActiveRecord::RecordNotFound
-              render json: { errors: 'User not found' }, status: :not_found
+            if @client
+                login!
+            else
+                render json: { errors: 'User not found' }, status: :not_found
+            end
           end        
     
         private
