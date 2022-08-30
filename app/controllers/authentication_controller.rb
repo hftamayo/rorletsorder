@@ -12,7 +12,8 @@ class AuthenticationController < ApplicationController
     # POST /auth/login
     def login
       @client = Client.find_by_email(params[:email])
-      if @client&.authenticate(params[:password])
+      if @client && @client.authenticate(params[:password])
+        login!
         token = JsonWebToken.encode(client_id: @client.id)
         time = Time.now + 24.hours.to_i
         render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M"),
@@ -20,6 +21,19 @@ class AuthenticationController < ApplicationController
       else
         render json: { error: 'unauthorized' }, status: :unauthorized
       end
+    end
+
+    def is_logged_in?
+      if logged_in && current_client
+        render json: { logged_in: true, client: current_client }
+      else
+        render json: { error: logged_in: false, message: 'user not found' }
+      end
+    end
+
+    def destroy_session
+      logout!
+      render json: { status: 200, logged_out: true }
     end
 
   private
